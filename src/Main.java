@@ -13,8 +13,10 @@ public class Main {
         Command switchRunHelpCommand = new RunHelpCommand(app);
         Command switchShowAllCommand = new ShowAllCommand(app);
         Command switchShowOneCommand = new ShowOneCommand(app);
+        Command switchRemoveCommand = new RemoveCommand(app);
 
-        Switch invoker = new Switch(switchCreateTaskCommand, switchRunHelpCommand, switchShowAllCommand, switchShowOneCommand);
+        Switch invoker = new Switch(switchCreateTaskCommand, switchRunHelpCommand,
+                switchShowAllCommand, switchShowOneCommand, switchRemoveCommand);
 
         while (true) {
             System.out.println("\n Please input command.");
@@ -34,6 +36,9 @@ public class Main {
                     break;
                 case "readAll":
                     invoker.showAllCommand();
+                    break;
+                case "remove":
+                    invoker.removeCommand();
                     break;
                 default:
                     System.out.println("Unknown command");

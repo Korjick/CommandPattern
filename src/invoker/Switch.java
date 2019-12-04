@@ -8,12 +8,14 @@ public class Switch {
     private Command runHelpCommand;
     private Command showAllCommand;
     private Command showOneCommand;
+    private Command removeCommand;
 
-    public Switch(Command createTaskCommand, Command runHelpCommand, Command showAllCommand, Command showOneCommand) {
+    public Switch(Command createTaskCommand, Command runHelpCommand, Command showAllCommand, Command showOneCommand, Command removeCommand) {
         this.createTaskCommand = createTaskCommand;
         this.runHelpCommand = runHelpCommand;
         this.showAllCommand = showAllCommand;
         this.showOneCommand = showOneCommand;
+        this.removeCommand = removeCommand;
     }
 
     public void createTaskCommand(){
@@ -31,4 +33,6 @@ public class Switch {
     public void showOneCommand(){
         showOneCommand.execute();
     }
+
+    public void removeCommand(){ removeCommand.execute(); }
 }

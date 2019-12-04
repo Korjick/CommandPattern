@@ -8,7 +8,7 @@ public class App {
 
     private ArrayList<String> tasks;
     private Scanner in;
-    private final String[] COMMAND_NAMES = { "exit", "help", "add", "read", "readAll" };
+    private final String[] COMMAND_NAMES = { "exit", "help", "add", "read", "readAll", "remove" };
 
     public App(Scanner in) {
         tasks = new ArrayList<>();
@@ -43,6 +43,19 @@ public class App {
             System.out.println("There is no task with that index.");
         } else {
             printTask(tasks.get(index));
+        }
+    }
+
+    public void remove(){
+        int number = Integer.parseInt(in.nextLine().trim());
+        int index = number - 1;
+        if (index < 0) {
+            System.out.println("Number must not be negative or zero.");
+            remove();
+        } else if (index >= tasks.size()) {
+            System.out.println("There is no task with that index.");
+        } else {
+            tasks.remove(index);
         }
     }
 
