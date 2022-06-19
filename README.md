@@ -5,7 +5,7 @@
   </a>
 </p>
 
-> Kava implementation of Basic Command Pattern
+> Java implementation of Basic Command Pattern
 
 ### 🏠 [Homepage](https://github.com/Korjick/Informatics-First-Semester-HW)
 
